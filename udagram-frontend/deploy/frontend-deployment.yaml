@@ -15,7 +15,7 @@ spec:
         app: udagram-frontend
     spec:
       containers:
-        - image: horllymobile/udagram-frontend:v2
+        - image: horllymobile/udagram-frontend:v1
           name: udagram-frontend
           imagePullPolicy: Always
           resources:
