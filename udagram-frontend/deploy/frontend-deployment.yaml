@@ -17,14 +17,14 @@ spec:
       containers:
         - image: horllymobile/udagram-frontend:v1
           name: udagram-frontend
-          imagePullPolicy: Always          
+          imagePullPolicy: Always
           resources:
             requests:
-              memory: "512Mi"
+              memory: "64Mi"
               cpu: "250m"
             limits:
               memory: "1024Mi"
-              cpu: "500m"       
+              cpu: "500m"     
           ports:
-          - containerPort: 8100
+          - containerPort: 80
       restartPolicy: Always
