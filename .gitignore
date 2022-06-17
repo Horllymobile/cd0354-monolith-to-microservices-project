@@ -46,3 +46,4 @@ aws-secret.yaml
 env-configmap.yaml
 env-secret.yaml
 cluster.sh
+deploy.sh
