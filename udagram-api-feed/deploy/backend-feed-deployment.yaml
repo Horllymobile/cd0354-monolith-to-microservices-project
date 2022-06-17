@@ -57,18 +57,18 @@ spec:
                   name: "mysecret"
                   key: "JWT_SECRET"
                   optional: false
-            - name: "POSTGRES_PASSWORD"
-              valueFrom:
-                secretKeyRef:
-                  name: "mysecret"
-                  key: "POSTGRES_PASSWORD"
-                  optional: false
             - name: "POSTGRES_USERNAME"
               valueFrom:
                 secretKeyRef:
                   name: "mysecret"
                   key: "POSTGRES_USERNAME"
                   optional: false
+            - name: "POSTGRES_PASSWORD"
+              valueFrom:
+                secretKeyRef:
+                  name: "mysecret"
+                  key: "POSTGRES_PASSWORD"
+                  optional: true
 
           volumeMounts:
           - name: "aws-secret"
