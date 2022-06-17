@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-        - image: horllymobile/udagram-api-feed:v3
+        - image: horllymobile/udagram-api-feed:v4
           name: backend-feed
           imagePullPolicy: Always
           env:
