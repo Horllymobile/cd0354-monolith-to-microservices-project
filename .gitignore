@@ -42,3 +42,7 @@ venv/
 !.elasticbeanstalk/*.global.yml
 set_env.sh
 test.yml
+aws-secret.yaml
+env-configmap.yaml
+env-secret.yaml
+cluster.sh

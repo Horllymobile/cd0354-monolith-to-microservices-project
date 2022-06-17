@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-user-deployment
+  labels:
+    app: udagram-api-user
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udagram-api-user
+  template:
+    metadata:
+      labels:
+        app: udagram-api-user
+    spec:
+      containers:
+        - image: horllymobile/udagram-api-user:v1
+          name: udagram-api-user
+          imagePullPolicy: Always          
+          resources:
+            requests:
+              memory: "2048Mi"
+              cpu: "250m"
+            limits:
+              memory: "4096Mi"
+              cpu: "500m"       
+          ports:
+          - containerPort: 8080
+      restartPolicy: Always
