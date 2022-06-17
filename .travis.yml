@@ -29,8 +29,8 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push horllymobile/udagram-api-feed:v3
-  - docker push horllymobile/udagram-api-user:v3
+  - docker push horllymobile/udagram-api-feed:v4
+  - docker push horllymobile/udagram-api-user:v4
   - docker push horllymobile/udagram-frontend:v2
   - docker push horllymobile/reverseproxy:v1
   # - docker-compose -f docker-compose-build.yaml build --parallel
