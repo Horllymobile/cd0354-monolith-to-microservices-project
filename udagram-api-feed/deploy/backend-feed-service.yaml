@@ -5,8 +5,10 @@ metadata:
     service: backend-feed
   name: backend-feed
 spec:
+  type: NodePort
   ports:
   - name: "8080"
+    protocol: TCP
     port: 8080
     targetPort: 8080
   selector:
