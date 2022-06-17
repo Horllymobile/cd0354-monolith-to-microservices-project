@@ -18,28 +18,6 @@ spec:
         - image: horllymobile/reverseproxy:v1
           name: reverseproxy
           imagePullPolicy: Always
-          command: ["/bin/sh", "-c", "env"]
-          env:
-            - name: "AWS_PROFILE"
-              valueFrom:
-                configMapKeyRef:
-                  name: "env-configmap"
-                  key: AWS_PROFILE
-            - name: "AWS_REGION"
-              valueFrom:
-                configMapKeyRef:
-                  name: "env-configmap"
-                  key: "AWS_REGION"
-            - name: "URL"
-              valueFrom:
-                configMapKeyRef:
-                  name: "env-configmap"
-                  key: "URL"
-            - name: "AWS_BUCKET"
-              valueFrom:
-                configMapKeyRef:
-                  name: "env-configmap"
-                  key: "AWS_BUCKET"
           resources:
             requests:
               memory: "64Mi"

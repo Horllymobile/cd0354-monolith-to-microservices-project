@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-feed-deployment
+  name: backend-feed
   labels:
-    app: udagram-api-feed
+    app: backend-feed
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-feed
+      app: backend-feed
   template:
     metadata:
       labels:
-        app: udagram-api-feed
+        app: backend-feed
     spec:
       containers:
         - image: horllymobile/udagram-api-feed:v2
-          name: udagram-api-feed
+          name: backend-feed
           imagePullPolicy: Always
           env:
             - name: "AWS_PROFILE"
