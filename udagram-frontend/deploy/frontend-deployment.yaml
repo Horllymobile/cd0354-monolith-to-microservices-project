@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-frontend
+  name: frontend
   labels:
-    app: udagram-frontend
+    app: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: udagram-frontend
+      app: frontend
   template:
     metadata:
       labels:
-        app: udagram-frontend
+        app: frontend
     spec:
       containers:
-        - image: horllymobile/udagram-frontend:v3
-          name: udagram-frontend
+        - image: horllymobile/udagram-frontend:v5
+          name: frontend
           imagePullPolicy: Always
           resources:
             requests:
