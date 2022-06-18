@@ -22,7 +22,7 @@ script:
   - docker tag udagram-api-user horllymobile/udagram-api-user:v4
 
   - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend horllymobile/udagram-frontend:v2
+  - docker tag udagram-frontend horllymobile/udagram-frontend:v4
 
   - docker build -t reverseproxy ./udagram-reverseproxy
   - docker tag reverseproxy horllymobile/reverseproxy:v2
@@ -31,7 +31,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push horllymobile/udagram-api-feed:v4
   - docker push horllymobile/udagram-api-user:v4
-  - docker push horllymobile/udagram-frontend:v2
+  - docker push horllymobile/udagram-frontend:v4
   - docker push horllymobile/reverseproxy:v2
   # - docker-compose -f docker-compose-build.yaml build --parallel
   # - docker-compose up

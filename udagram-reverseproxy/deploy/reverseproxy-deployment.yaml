@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-        - image: horllymobile/reverseproxy:v1
+        - image: horllymobile/reverseproxy:v2
           name: reverseproxy
           imagePullPolicy: Always
           resources:
