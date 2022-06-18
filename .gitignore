@@ -48,3 +48,4 @@ env-secret.yaml
 cluster.sh
 deploy.sh
 hpa.sh
+eksctl.sh
