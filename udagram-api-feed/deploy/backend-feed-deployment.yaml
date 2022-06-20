@@ -18,6 +18,8 @@ spec:
         - image: horllymobile/udagram-api-feed:v4
           name: backend-feed
           imagePullPolicy: Always
+          ports:
+          - containerPort: 8080
           env:
             - name: "AWS_PROFILE"
               valueFrom:
@@ -69,7 +71,6 @@ spec:
                   name: "mysecret"
                   key: "POSTGRES_PASSWORD"
                   optional: true
-
           volumeMounts:
           - name: "aws-secret"
             mountPath: "/root/.aws/"
